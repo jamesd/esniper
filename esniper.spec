@@ -1,6 +1,6 @@
 Name:           esniper
 Version:        2.26.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A lightweight console application for sniping eBay auctions 
 
 Group:          Applications/Internet
@@ -16,6 +16,11 @@ Esniper is a lightweight console application for sniping eBay auctions.
 
 %prep
 %setup -q -n %{name}-2-26-0
+
+# Stop importing a long abandoned curl header file
+# curl 7.21.7 doesn't ship it anymore.
+# https://sourceforge.net/tracker/?func=detail&aid=3389276&group_id=45285&atid=442436
+sed -i '/#include <curl\/types.h>/d' http.c
 
 # Encode manpage to utf-8
 iconv -f iso8859-1 -t utf-8 esniper.1 > esniper.1.conv \
@@ -43,6 +48,9 @@ install -p -m 755 frontends/snipe %{buildroot}/%{_bindir}
 
 
 %changelog
+* Tue Aug 09 2011 Volker Fröhlich <volker27@gmx.at> - 2.26.0-2
+- Don't include curl's types.h
+
 * Tue Aug 09 2011 Volker Fröhlich <volker27@gmx.at> - 2.26.0-1
 - Update for 2.26.0
 - Drop defattr
