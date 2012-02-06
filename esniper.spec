@@ -47,6 +47,9 @@ install -p -m 755 frontends/snipe %{buildroot}/%{_bindir}
 - New upstream release
 - Remove curl fix from previous release (included upstream)
 
+* Fri Jan 13 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.26.0-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+
 * Tue Aug 09 2011 Volker Fröhlich <volker27@gmx.at> - 2.26.0-2
 - Don't include curl's types.h
 
