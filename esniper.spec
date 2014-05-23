@@ -1,12 +1,12 @@
 Name:           esniper
-Version:        2.29.0
+Version:        2.30.0
 Release:        1%{?dist}
 Summary:        A lightweight console application for sniping eBay auctions 
 
 Group:          Applications/Internet
 License:        BSD
 URL:            http://esniper.sourceforge.net
-Source0:        http://downloads.sourceforge.net/%{name}/%{name}-2-29-0.tgz
+Source0:        http://downloads.sourceforge.net/%{name}/%{name}-2-30-0.tgz
 
 BuildRequires:  curl-devel
 
@@ -15,7 +15,7 @@ Esniper is a lightweight console application for sniping eBay auctions.
 
 
 %prep
-%setup -q -n %{name}-2-29-0
+%setup -q -n %{name}-2-30-0
 
 # Encode manpage to utf-8
 iconv -f iso8859-1 -t utf-8 esniper.1 > esniper.1.conv \
@@ -43,6 +43,9 @@ install -p -m 755 frontends/snipe %{buildroot}/%{_bindir}
 
 
 %changelog
+* Fri May 23 2014 Volker Fröhlich <volker27@gmx.at> - 2.30.0-1
+- New upstream release
+
 * Wed Apr 02 2014 Volker Fröhlich <volker27@gmx.at> - 2.29.0-1
 - New upstream release
 
