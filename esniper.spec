@@ -1,6 +1,6 @@
 Name:           esniper
-Version:        2.31.0
-Release:        5%{?dist}
+Version:        2.32.0
+Release:        1%{?dist}
 Summary:        A lightweight console application for sniping eBay auctions 
 
 Group:          Applications/Internet
@@ -43,6 +43,9 @@ install -p -m 755 frontends/snipe %{buildroot}/%{_bindir}
 
 
 %changelog
+* Mon Oct 31 2016 Volker Fröhlich <volker27@gmx.at> - 2.32.0-1
+- New upstream release
+
 * Wed Feb 03 2016 Fedora Release Engineering <releng@fedoraproject.org> - 2.31.0-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
 
