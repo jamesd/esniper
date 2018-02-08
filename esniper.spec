@@ -1,9 +1,8 @@
 Name:           esniper
 Version:        2.33.0
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        A lightweight console application for sniping eBay auctions 
 
-Group:          Applications/Internet
 License:        BSD
 URL:            http://esniper.sourceforge.net
 %global dashver %(echo -n %{version} | tr '.' '-')
@@ -44,6 +43,9 @@ install -p -m 755 frontends/snipe %{buildroot}/%{_bindir}
 
 
 %changelog
+* Thu Feb 08 2018 Volker Fröhlich <volker27@gmx.at> - 2.33.0-5
+- Remove Group keyword
+
 * Wed Feb 07 2018 Fedora Release Engineering <releng@fedoraproject.org> - 2.33.0-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
 
