@@ -1,6 +1,6 @@
 Name:           esniper
-Version:        2.33.0
-Release:        5%{?dist}
+Version:        2.35.0
+Release:        1%{?dist}
 Summary:        A lightweight console application for sniping eBay auctions 
 
 License:        BSD
@@ -43,6 +43,9 @@ install -p -m 755 frontends/snipe %{buildroot}/%{_bindir}
 
 
 %changelog
+* Mon Jun 18 2018 Volker Fröhlich <volker27@gmx.at> - 2.35.0-1
+- New upstream release
+
 * Thu Feb 08 2018 Volker Fröhlich <volker27@gmx.at> - 2.33.0-5
 - Remove Group keyword
 
