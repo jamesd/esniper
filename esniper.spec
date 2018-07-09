@@ -8,6 +8,7 @@ URL:            http://esniper.sourceforge.net
 %global dashver %(echo -n %{version} | tr '.' '-')
 Source0:        http://downloads.sourceforge.net/%{name}/%{name}-%{dashver}.tgz
 
+BuildRequires:  gcc
 BuildRequires:  curl-devel
 
 %description
